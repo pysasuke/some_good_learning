@@ -9,7 +9,9 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Lock与synchronized是不一样的
- * Created by Administrator on 2017/11/19 0019.
+ *
+ * @author Administrator
+ * @date 2017/11/19 0019
  * 注意：两种不同的锁机制，根据不同的情况来选择
  */
 //灵活、强大则选择Lock，快捷、安全则选择synchronized
@@ -64,9 +66,13 @@ class Task {
     }
 }
 
-//显式锁任务
+/**
+ * 显式锁任务
+ */
 class TaskWithLock extends Task implements Runnable {
-    //声明显式锁
+    /**
+     * 声明显式锁
+     */
     private final Lock lock = new ReentrantLock();
 
     @Override
@@ -81,7 +87,9 @@ class TaskWithLock extends Task implements Runnable {
     }
 }
 
-//内部锁任务
+/**
+ * 内部锁任务
+ */
 class TaskWithSync extends Task implements Runnable {
 
     @Override

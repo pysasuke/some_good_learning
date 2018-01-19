@@ -3,7 +3,9 @@ package com.py.somesuggest.chapter1.no12;
 import com.py.somesuggest.chapter1.no11.SerializationUtils;
 
 /**
- * Created by Administrator on 2017/9/10 0010.
+ *
+ * @author Administrator
+ * @date 2017/9/10 0010
  */
 public class Deserialize {
     public static void main(String[] args) {

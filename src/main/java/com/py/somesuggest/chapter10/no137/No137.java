@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter10.no137;
 
 /**
  * 调整JVM参数以提升性能
- * Created by Administrator on 2017/11/23 0023.
+ *
+ * @author Administrator
+ * @date 2017/11/23 0023
  */
 /*
 1.调整堆内存大小

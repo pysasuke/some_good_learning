@@ -2,7 +2,6 @@ package com.py.somesuggest.chapter11.no141;
 
 
 import org.apache.commons.beanutils.*;
-import org.apache.commons.beanutils.converters.BigDecimalConverter;
 import org.apache.commons.collections.Bag;
 import org.apache.commons.collections.BidiMap;
 import org.apache.commons.collections.Factory;
@@ -24,7 +23,9 @@ import java.util.*;
 
 /**
  * Apache扩展包
- * Created by Administrator on 2017/11/26 0026.
+ *
+ * @author Administrator
+ * @date 2017/11/26 0026
  */
 public class No141 {
     public static void main(String[] args) {
@@ -34,7 +35,7 @@ public class No141 {
     @Test
     public void langTest() {
         //1.字符串操作工具类
-        StringTest();
+        stringTest();
         //2.Object工具类(见Person类)
         //3.可变的基本类型
         mutableBaseTest();
@@ -64,24 +65,32 @@ public class No141 {
         bidiMapTest();
     }
 
-    private void StringTest() {
+    private void stringTest() {
         String str = "123";
         //判断一个字符串是否为空，null或""都返回true
-        System.out.println(StringUtils.isEmpty(str));    //false
+        //false
+        System.out.println(StringUtils.isEmpty(str));
         //是否数字
-        System.out.println(StringUtils.isNumeric(str));    //true
+        //true
+        System.out.println(StringUtils.isNumeric(str));
         //最左边两个字符
-        System.out.println(StringUtils.left(str, 2));    //12
+        //12
+        System.out.println(StringUtils.left(str, 2));
         //统计子字符串出现的次数
-        System.out.println(StringUtils.countMatches(str, "1"));    //1
+        //1
+        System.out.println(StringUtils.countMatches(str, "1"));
         //转译XML标识
-        System.out.println(StringEscapeUtils.escapeXml(str));    //123
+        //123
+        System.out.println(StringEscapeUtils.escapeXml(str));
         //随机生成，长度为10的仅字母的字符串
-        System.out.println(RandomStringUtils.randomAlphabetic(10));    //bMbuUQoasP
+        //bMbuUQoasP
+        System.out.println(RandomStringUtils.randomAlphabetic(10));
         //随机生成，长度为10的ASCII字符串
-        System.out.println(RandomStringUtils.randomAscii(10));    //]uanJ ^9Mu
+        //]uanJ ^9Mu
+        System.out.println(RandomStringUtils.randomAscii(10));
         //以一个单词为操作对象，首字母大写，输出结果为Abc Bcd
-        System.out.println(WordUtils.capitalize("abc bcd"));    //Abc Bcd
+        //Abc Bcd
+        System.out.println(WordUtils.capitalize("abc bcd"));
     }
 
     public void mutableBaseTest() {
@@ -89,10 +98,12 @@ public class No141 {
         MutableInt mi = new MutableInt(10);
         //mi加10，结果为20
         mi.add(10);
-        System.out.println(mi);    //20
+        //20
+        System.out.println(mi);
         //自加1，结果为21
         mi.increment();
-        System.out.println(mi);    //21
+        //21
+        System.out.println(mi);
     }
 
     private void attrCopyTest() throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
@@ -101,13 +112,15 @@ public class No141 {
         //VO对象
         UserVO userVO = new UserVO();
         //两个Bean属性拷贝(自己总结：User和UserVO必须是public class，否则不起作用)
-        PropertyUtils.copyProperties(userVO, user);    //UserVO(name=张三, age=10)
+        //UserVO(name=张三, age=10)
+        PropertyUtils.copyProperties(userVO, user);
         System.out.println(userVO);
         //把Map中的键值对拷贝到Bean上
         Map<String, String> map = new HashMap<>();
         map.put("name", "李四");
         PropertyUtils.copyProperties(userVO, map);
-        System.out.println(userVO);    //UserVO(name=李四, age=10)
+        //UserVO(name=李四, age=10)
+        System.out.println(userVO);
     }
 
     private void dynaBeanTest() throws InstantiationException, IllegalAccessException {
@@ -148,7 +161,8 @@ public class No141 {
         //建立一个依赖特定转换工具的Bean工具类
         BeanUtilsBean beanUtils = new BeanUtilsBean(cub);
         //输出结果为：prefix-张三
-        System.out.println(beanUtils.getProperty(user, "name"));    //prefix-张三
+        //prefix-张三
+        System.out.println(beanUtils.getProperty(user, "name"));
     }
 
     private void bagTest() {
@@ -157,12 +171,14 @@ public class No141 {
         //又增加3个蓝色球
         box.add("blue", 3);
         //球的数量为7
-        System.out.println(box.size());    //7
+        //7
+        System.out.println(box.size());
         //蓝色球数量为5
-        System.out.println(box.getCount("blue"));    //5
+        //5
+        System.out.println(box.getCount("blue"));
     }
 
-    private void lazyTest(){
+    private void lazyTest() {
         //把一个List包装成一个lazy类型
         List<String> lazy = LazyList.decorate(new ArrayList(),
                 new Factory() {
@@ -172,24 +188,29 @@ public class No141 {
                     }
                 });
         //访问了第4个元素，此时0、1、2元素为null
-        String obj =lazy.get(3);    //A
+        //A
+        String obj = lazy.get(3);
         System.out.println(obj);
         //追加一个元素
         lazy.add("第五个元素");
-        System.out.println(lazy.size());     //5
+        //5
+        System.out.println(lazy.size());
     }
 
-    private void bidiMapTest(){
+    private void bidiMapTest() {
         //key、value都不允许重复的Map
         BidiMap bidiMap = new TreeBidiMap();
-        bidiMap.put(1,"壹");
+        bidiMap.put(1, "壹");
         //根据key获取value
-        System.out.println(bidiMap.get(1));    //壹
+        //壹
+        System.out.println(bidiMap.get(1));
         //根据value获取key
-        System.out.println(bidiMap.getKey("壹"));    //1
+        //1
+        System.out.println(bidiMap.getKey("壹"));
         //根据value删除键值对
         bidiMap.removeValue("壹");
-        System.out.println(bidiMap.get(1));    //null
+        //null
+        System.out.println(bidiMap.get(1));
     }
 }
 
@@ -214,6 +235,7 @@ class Person {
     }
 
     //自定义输出格式
+    @Override
     public String toString() {
         return new ToStringBuilder(this)
                 .append("姓名", name)
@@ -221,6 +243,7 @@ class Person {
                 .toString();
     }
 
+    @Override
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;
@@ -240,6 +263,7 @@ class Person {
     }
 
     //自定义hashCode
+    @Override
     public int hashCode() {
         return HashCodeBuilder.reflectionHashCode(this);
     }

@@ -19,6 +19,7 @@ public class HangAndRecovery extends Object implements Runnable {
     }
 
 
+    @Override
     public void run() {
         try {
             firstVal = 0;
@@ -36,7 +37,8 @@ public class HangAndRecovery extends Object implements Runnable {
             stepOne(val);
             stepTwo(val);
             val++;
-            Thread.sleep(200); /*再次循环钱休眠200毫秒*/
+            /*再次循环前休眠200毫秒*/
+            Thread.sleep(200);
         }
     }
 
@@ -44,7 +46,8 @@ public class HangAndRecovery extends Object implements Runnable {
     //赋值后，休眠300毫秒，从而使线程有机会在stepOne操作和stepTwo操作之间被挂起
     private void stepOne(int newVal) throws InterruptedException {
         firstVal = newVal;
-        Thread.sleep(300); /*模拟长时间运行的情况*/
+        /*模拟长时间运行的情况*/
+        Thread.sleep(300);
     }
 
     private void stepTwo(int newVal) {

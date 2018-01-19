@@ -6,7 +6,9 @@ import java.util.List;
 
 /**
  * 生成子列表后不要再操作原始列表
- * Created by Administrator on 2017/10/25 0025.
+ *
+ * @author Administrator
+ * @date 2017/10/25 0025
  * subList生成子列表后，保持原始列表的只读状态。
  */
 //只要生产的自列表多于一个，则任何一个自列表就都不能修改了，否则就会抛出ConcurrentModificationException异常。
@@ -31,6 +33,7 @@ public class No72 {
         但是subList取出来的自列表不会重新生成一个新列表(这点与数据库视图是不相同的)，
         后面在对子列表继续操作时，就会检测到修改计数器与预期的不同，于是就抛出了并发修改异常。
          */
-        System.out.println("子列表长度:" + subList.size());    //Exception in thread "main" java.util.ConcurrentModificationException
+        //Exception in thread "main" java.util.ConcurrentModificationException
+        System.out.println("子列表长度:" + subList.size());
     }
 }

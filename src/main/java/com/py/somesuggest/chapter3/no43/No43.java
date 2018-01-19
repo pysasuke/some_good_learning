@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter3.no43;
 
 /**
  * 避免对象的浅拷贝
- * Created by Administrator on 2017/10/14 0014.
+ *
+ * @author Administrator
+ * @date 2017/10/14 0014
  * 注意：浅拷贝只是Java提供的一种简单拷贝机制，不便于直接使用
  */
 /*
@@ -27,11 +29,15 @@ public class No43 {
         //小儿子的信息是通过大儿子拷贝过来的
         Person s2 = s1.clone();
         s2.setName("小儿子");
-        System.out.println(s1.getName()+" 的父亲是 "+s1.getFather().getName());    //大儿子 的父亲是 父亲
-        System.out.println(s2.getName()+" 的父亲是 "+s2.getFather().getName());    //小儿子 的父亲是 父亲
+        //大儿子 的父亲是 父亲
+        System.out.println(s1.getName()+" 的父亲是 "+s1.getFather().getName());
+        //小儿子 的父亲是 父亲
+        System.out.println(s2.getName()+" 的父亲是 "+s2.getFather().getName());
         s1.getFather().setName("干爹");
-        System.out.println(s1.getName()+" 的父亲是 "+s1.getFather().getName());    //大儿子 的父亲是 干爹
-        System.out.println(s2.getName()+" 的父亲是 "+s2.getFather().getName());    //小儿子 的父亲是 干爹
+        //大儿子 的父亲是 干爹
+        System.out.println(s1.getName()+" 的父亲是 "+s1.getFather().getName());
+        //小儿子 的父亲是 干爹
+        System.out.println(s2.getName()+" 的父亲是 "+s2.getFather().getName());
 
     }
 }
@@ -42,13 +48,13 @@ class Person implements Cloneable {
     //父亲
     private Person father;
 
-    public Person(String _name) {
-        name = _name;
+    public Person(String name) {
+        this.name = name;
     }
 
-    public Person(String _name, Person _parent) {
-        name = _name;
-        father = _parent;
+    public Person(String name, Person parent) {
+        this.name = name;
+        this.father = parent;
     }
 
     public String getName() {

@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter10.no132;
 
 /**
  * 提升Java性能的基本方法
- * Created by Administrator on 2017/11/21 0021.
+ *
+ * @author Administrator
+ * @date 2017/11/21 0021
  */
 /*
 (1)不要在循环条件中计算

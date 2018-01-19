@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter12.no146;
 
 /**
  * 让注释正确、清晰、简洁
- * Created by Administrator on 2017/11/28 0028.
+ *
+ * @author Administrator
+ * @date 2017/11/28 0028
  * 注释不是美化剂，而是催化剂，或为优秀加分，或为拙劣减分
  */
 /*

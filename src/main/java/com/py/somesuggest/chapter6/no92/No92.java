@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter6.no92;
 
 /**
  * 注意@Override不同版本的区别
- * Created by Administrator on 2017/11/3 0003.
+ *
+ * @author Administrator
+ * @date 2017/11/3 0003
  */
 /*
 1.5版中@Override是严格尊重覆写的定义：

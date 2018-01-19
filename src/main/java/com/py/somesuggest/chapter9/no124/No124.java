@@ -4,7 +4,9 @@ import java.util.concurrent.*;
 
 /**
  * 异步运算考虑使用Callable接口
- * Created by Administrator on 2017/11/15 0015.
+ *
+ * @author Administrator
+ * @date 2017/11/15 0015
  */
 public class No124 {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
@@ -23,14 +25,16 @@ public class No124 {
     }
 }
 
-//税率计算器
+/**
+ * 税率计算器
+ */
 class TaxCalculator implements Callable<Integer> {
     //本金
     private int seedMoney;
 
     //接收主线程提供的参数
-    public TaxCalculator(int _seedMoney) {
-        seedMoney = _seedMoney;
+    public TaxCalculator(int seedMoney) {
+        this.seedMoney = seedMoney;
     }
 
     @Override

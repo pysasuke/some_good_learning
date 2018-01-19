@@ -1,14 +1,14 @@
 package com.py.somesuggest.chapter6.no86;
 
-import com.sun.org.apache.bcel.internal.generic.BREAKPOINT;
-
 /**
  * 在switch的default代码块中增加AssertionError错误
- * Created by Administrator on 2017/10/31 0031.
+ *
+ * @author Administrator
+ * @date 2017/10/31 0031
  */
 public class No86 {
-    public void doSomething(LogLevel logLevel){
-        switch (logLevel){
+    public void doSomething(LogLevel logLevel) {
+        switch (logLevel) {
             case DEBUG:
                 System.out.println("DEBUG");
                 break;
@@ -27,6 +27,7 @@ public class No86 {
         }
     }
 }
-enum LogLevel{
-    DEBUG,INFO,WARN,ERROR;
+
+enum LogLevel {
+    DEBUG, INFO, WARN, ERROR
 }

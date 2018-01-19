@@ -4,28 +4,39 @@ import java.util.zip.DataFormatException;
 
 /**
  * 不要在finally块中处理返回值
- * Created by Administrator on 2017/11/13 0013.
+ *
+ * @author Administrator
+ * @date 2017/11/13 0013
  * 注意：不要在finally代码块中出现return语句。
  */
 public class No113 {
     public static void main(String[] args) {
         try {
-            System.out.println(doStuff(-1));    //-1
-            System.out.println(doStuff(100));    //-1
-            System.out.println(doStuffInt());    //1
-            System.out.println(doStuffPerson());    //Person{name='李四'}
+            //-1
+            System.out.println(doStuff(-1));
+            //-1
+            System.out.println(doStuff(100));
+            //1
+            System.out.println(doStuffInt());
+            //Person{name='李四'}
+            System.out.println(doStuffPerson());
         } catch (Exception e) {
             System.out.println("这里是永远都不会到达的");
         }
     }
 
-    //该方法抛出受检异常
-    public static int doStuff(int _p) throws Exception {
+    /**
+     * 该方法抛出受检异常
+     * @param p
+     * @return
+     * @throws Exception
+     */
+    public static int doStuff(int p) throws Exception {
         try {
-            if (_p < 0) {
+            if (p < 0) {
                 throw new DataFormatException("数据格式错误");
             } else {
-                return _p;
+                return p;
             }
         } catch (Exception e) {
             //异常处理

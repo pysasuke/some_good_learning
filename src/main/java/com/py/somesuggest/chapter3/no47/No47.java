@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter3.no47;
 
 /**
  * 在equals中使用getClass进行类型判断
- * Created by Administrator on 2017/10/17 0017.
+ *
+ * @author Administrator
+ * @date 2017/10/17 0017
  */
 //在覆写equals时建议使用getClass进行类型判断，而不要使用instanceof
 public class No47 {
@@ -10,18 +12,22 @@ public class No47 {
         Employee e1 = new Employee("张三 ", 100);
         Employee e2 = new Employee("张三 ", 1001);
         Person p1 = new Person("张三 ");
-        System.out.println(p1.equals(e1));    //true
-        System.out.println(p1.equals(e2));    //true
-        System.out.println(e1.equals(p1));    //false
-        System.out.println(e1.equals(e2));    //false
+        //true
+        System.out.println(p1.equals(e1));
+        //true
+        System.out.println(p1.equals(e2));
+        //false
+        System.out.println(e1.equals(p1));
+        //false
+        System.out.println(e1.equals(e2));
     }
 }
 
 class Person {
     private String name;
 
-    public Person(String _name) {
-        name = _name;
+    public Person(String name) {
+        this.name = name;
     }
 
     public String getName() {
@@ -34,7 +40,8 @@ class Person {
 
     @Override
     public boolean equals(Object obj) {
-//        if (obj instanceof Person) {    //NOT DO THIS  违反了equals的传递性原则：对于实例对象x、y、z来说，如果x.equals(y)返回true，y.equals(z)返回true，那么x.equals(z)也应该返回true。
+        //NOT DO THIS  违反了equals的传递性原则：对于实例对象x、y、z来说，如果x.equals(y)返回true，y.equals(z)返回true，那么x.equals(z)也应该返回true。
+//        if (obj instanceof Person) {
         if (null != obj && obj.getClass() == this.getClass()) {
             Person p = (Person) obj;
             if (p.getName() == null || name == null) {
@@ -58,9 +65,9 @@ class Employee extends Person {
         this.id = id;
     }
 
-    public Employee(String _name, int _id) {
-        super(_name);
-        id = _id;
+    public Employee(String name, int id) {
+        super(name);
+        this.id = id;
     }
 
     @Override

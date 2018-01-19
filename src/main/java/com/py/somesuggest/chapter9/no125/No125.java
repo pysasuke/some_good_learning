@@ -5,7 +5,9 @@ import java.util.concurrent.Executors;
 
 /**
  * 优先选择线程池
- * Created by Administrator on 2017/11/15 0015.
+ *
+ * @author Administrator
+ * @date 2017/11/15 0015
  */
 public class No125 {
     public static void main(String[] args) {

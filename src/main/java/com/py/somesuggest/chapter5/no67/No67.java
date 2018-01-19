@@ -6,7 +6,9 @@ import java.util.*;
 
 /**
  * 不同的列表选择不同的遍历方法
- * Created by Administrator on 2017/10/24 0024.
+ *
+ * @author Administrator
+ * @date 2017/10/24 0024
  * 注意：列表遍历不是那么简单的，其中很有“学问”，适时选择最优的便利方式，不要固化为一种。
  */
 public class No67 {
@@ -79,17 +81,25 @@ public class No67 {
 
         //记录开始计算时间
         long start = System.currentTimeMillis();
-        System.out.println("平均分是：" + average1(scores));    //平均分是：74
+        //平均分是：74
+        System.out.println("平均分是：" + average1(scores));
         long end = System.currentTimeMillis();
-        System.out.println("执行时间：" + (end - start) + "ms");    //执行时间：26ms
+        //执行时间：26ms
+        System.out.println("执行时间：" + (end - start) + "ms");
         //记录开始计算时间
         start = System.currentTimeMillis();
-        System.out.println("平均分是：" + average2(scores));    //平均分是：74
+        //平均分是：74
+        System.out.println("平均分是：" + average2(scores));
         end = System.currentTimeMillis();
-        System.out.println("执行时间：" + (end - start) + "ms");    //执行时间：17ms
+        //执行时间：17ms
+        System.out.println("执行时间：" + (end - start) + "ms");
     }
 
-    //计算平均数
+    /**
+     * 计算平均数
+     * @param list
+     * @return
+     */
     public static int average(List<Integer> list) {
         int sum = 0;
         //遍历求和

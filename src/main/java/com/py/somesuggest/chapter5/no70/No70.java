@@ -5,7 +5,9 @@ import java.util.List;
 
 /**
  * 子列表只是原列表的一个视图
- * Created by Administrator on 2017/10/25 0025.
+ *
+ * @author Administrator
+ * @date 2017/10/25 0025
  * 注意：subList产生的列表只是一个视图，所有的修改动作直接作用于原列表
  */
 public class No70 {
@@ -16,7 +18,8 @@ public class No70 {
         list.add("B");
         //构造一个包含list列表的字符串列表
         List<String> list2 = new ArrayList<>(list);
-        System.out.println("list == list2? " + list.equals(list2));    //true
+        //true
+        System.out.println("list == list2? " + list.equals(list2));
         //subList生成与list相同的列表
         /*
         subList方法实现原理：
@@ -27,8 +30,11 @@ public class No70 {
         List<String> list3 = list.subList(0, list.size());
         //list3增加一个元素
         list3.add("C");
-        System.out.println("list == list2? " + list.equals(list2));    //false
-        System.out.println("list == list3? " + list.equals(list3));    //true
-        System.out.println(list.size());    //3
+        //false
+        System.out.println("list == list2? " + list.equals(list2));
+        //true
+        System.out.println("list == list3? " + list.equals(list3));
+        //3
+        System.out.println(list.size());
     }
 }

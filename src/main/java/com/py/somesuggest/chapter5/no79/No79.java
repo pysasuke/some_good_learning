@@ -7,7 +7,9 @@ import java.util.Map;
 
 /**
  * 集合中的哈希码不要重复
- * Created by Administrator on 2017/10/30 0030.
+ *
+ * @author Administrator
+ * @date 2017/10/30 0030
  * 注意：HashMap中的hashCode应避免冲突
  */
 /*
@@ -29,7 +31,8 @@ public class No79 {
         list.contains("value" + (size - 1));
         //记录结束时间，单位纳秒
         long end = System.nanoTime();
-        System.out.println("list执行时间:" + (end - start) + "ns");    //list执行时间:1218452ns
+        //list执行时间:1218452ns
+        System.out.println("list执行时间:" + (end - start) + "ns");
         //Map的查找时间
         Map<String, String> map = new HashMap<>();
         for (int i = 0; i < size; i++) {
@@ -38,7 +41,8 @@ public class No79 {
         start = System.nanoTime();
         map.containsKey("key" + (size - 1));
         end = System.nanoTime();
-        System.out.println("map执行时间:" + (end - start) + "ns");    //map执行时间:37358ns
+        //map执行时间:37358ns
+        System.out.println("map执行时间:" + (end - start) + "ns");
 
     }
 }

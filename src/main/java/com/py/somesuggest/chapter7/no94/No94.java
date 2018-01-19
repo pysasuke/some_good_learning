@@ -6,7 +6,9 @@ import java.util.List;
 
 /**
  * 不能初始化泛型参数的数组
- * Created by Administrator on 2017/11/4 0004.
+ *
+ * @author Administrator
+ * @date 2017/11/4 0004
  */
 public class No94 {
 }
@@ -14,7 +16,8 @@ public class No94 {
 class Foo<T> {
     //    private T t = new T();    //NOT DO THIS    编译不通过，因为编译器在编译时需要获得T类型，但泛型在编译器类型已经被擦出了。
 //    private T[] tArray = new T[5];    //NOT DO THIS
-    private List<T> list = new ArrayList<>();    //编译通过：因为ArrayList表面是泛型，其实已经在编译期转型为Object了
+    //编译通过：因为ArrayList表面是泛型，其实已经在编译期转型为Object了
+    private List<T> list = new ArrayList<>();
 }
 
 class Foo2<T> {

@@ -15,7 +15,9 @@ import java.util.Map;
 
 /**
  * 推荐使用Guava扩展工具包
- * Created by Administrator on 2017/11/26 0026.
+ *
+ * @author Administrator
+ * @date 2017/11/26 0026
  */
 public class No140 {
     //(1)Collections
@@ -32,14 +34,16 @@ public class No140 {
         Multimap<String, String> phoneBook = ArrayListMultimap.create();
         phoneBook.put("张三", "110");
         phoneBook.put("张三", "119");
-        System.out.println(phoneBook.get("张三"));    //[110, 119]
+        //[110, 119]
+        System.out.println(phoneBook.get("张三"));
 
         //3.Table表
         Table<Double, Double, String> g = HashBasedTable.create();
         //定义人民广场的经度纬度坐标
         g.put(31.23, 121.48, "人民广场");
         //输出坐标点的建筑物
-        System.out.println(g.get(31.23, 121.48));    //人民广场
+        //人民广场
+        System.out.println(g.get(31.23, 121.48));
         //Table，完全类似于数据库表
         Table<Integer, Integer, String> user = HashBasedTable.create();
         //第一行、第一列的值是张三
@@ -47,7 +51,8 @@ public class No140 {
         //第一行、第二列的值是李四
         user.put(1, 2, "李四");
         //第一行第一列是谁
-        System.out.println(user.get(1, 1));    //张三
+        //张三
+        System.out.println(user.get(1, 1));
 
         //4.集合工具类
         //Lists、Maps、Sets分别对应的是List、Map、Set的工具类
@@ -59,8 +64,8 @@ public class No140 {
         //所以年龄大于20岁的人员
         Map<String, Integer> filteMap = Maps.filterValues(userMap, new Predicate<Integer>() {
             @Override
-            public boolean apply(@Nullable Integer _age) {
-                return _age > 20;
+            public boolean apply(@Nullable Integer age) {
+                return age > 20;
             }
         });
     }
@@ -113,11 +118,13 @@ public class No140 {
         //以基本类型名+s的方式命名的，比如Ints是int的工具类，Doubles是double的工具类，注意这些都是针对基本类型的，而不是针对包装类型的。
         int[] ints = {10, 9, 20, 40, 80};
         //从数组中取出最大值
-        System.out.println(Ints.max(ints));    //80
+        //80
+        System.out.println(Ints.max(ints));
         List<Integer> integers = new ArrayList<>();
         //把包装类型的集合转为基本类型数据
         ints = Ints.toArray(integers);
-        System.out.println(ints.length);    //0
+        //0
+        System.out.println(ints.length);
     }
 
 }

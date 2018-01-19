@@ -30,7 +30,8 @@ public class ArrayUtils {
      * @return T[]
      */
     public static <T> T[] expandCapacity(T[] datas) {
-        int newLen = (datas.length * 3) / 2; /*扩容原始数组的1.5倍*/
+        /*扩容原始数组的1.5倍*/
+        int newLen = (datas.length * 3) / 2;
         //生成一个新的数组
         return Arrays.copyOf(datas, newLen);
     }

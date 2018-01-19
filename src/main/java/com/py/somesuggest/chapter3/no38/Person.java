@@ -1,7 +1,9 @@
 package com.py.somesuggest.chapter3.no38;
 
 /**
- * Created by Administrator on 2017/10/9 0009.
+ *
+ * @author Administrator
+ * @date 2017/10/9 0009
  */
 /*
 静态内部类与普通内部类的区别：
@@ -19,14 +21,21 @@ package com.py.somesuggest.chapter3.no38;
     还是可以的，而静态内部类形似外部类，没有任何限制。
  */
 public class Person {
-    //姓名
+    /**
+     * 姓名
+     */
     private String name;
-    //家庭
+    /**
+     * 家庭
+     */
     private Home home;
 
-    //构造函数设置属性值
-    public Person(String _name) {
-        name = _name;
+    /**
+     * 构造函数设置属性值
+     * @param name
+     */
+    public Person(String name) {
+        this.name = name;
     }
 
     public Home getHome() {
@@ -46,14 +55,18 @@ public class Person {
     }
 
     public static class Home {
-        //家庭住址
+        /**
+         * 家庭住址
+         */
         private String address;
-        //家庭电话
+        /**
+         * 家庭电话
+         */
         private String tel;
 
-        public Home(String _address, String _tel) {
-            address = _address;
-            tel = _tel;
+        public Home(String address, String tel) {
+            this.address = address;
+            this.tel = tel;
         }
 
         public String getAddress() {

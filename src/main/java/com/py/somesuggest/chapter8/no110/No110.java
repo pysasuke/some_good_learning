@@ -9,7 +9,9 @@ import java.util.List;
 
 /**
  * 提倡异常封装
- * Created by Administrator on 2017/11/8 0008.
+ *
+ * @author Administrator
+ * @date 2017/11/8 0008
  */
 public class No110 {
     public static void main(String[] args) throws MyBusinessException {
@@ -82,8 +84,8 @@ class MyException extends Exception {
     private List<Throwable> causes = new ArrayList<>();
 
     //构造函数，传递一个异常列表
-    public MyException(List<? extends Throwable> _causes) {
-        causes.addAll(_causes);
+    public MyException(List<? extends Throwable> causes) {
+        this.causes.addAll(causes);
     }
 
     //读取所有的异常

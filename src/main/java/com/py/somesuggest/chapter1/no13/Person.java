@@ -4,7 +4,9 @@ import java.io.Serializable;
 
 /**
  * 避免为final变量复杂赋值
- * Created by Administrator on 2017/9/10 0010.
+ *
+ * @author Administrator
+ * @date 2017/9/10 0010
  */
 public class Person implements Serializable {
     private static final long serialVersionUID = 91282334L;
@@ -12,7 +14,9 @@ public class Person implements Serializable {
     //通过new生成的Person对象的final变量值都是initName()中的返回值
     public final String name = initName();
 
-    //初始化方法名
+    /**
+     * 初始化方法名
+     */
     public String initName() {
 //        return "混世魔王";
         return "德天使";

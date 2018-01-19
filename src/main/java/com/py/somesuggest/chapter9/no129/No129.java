@@ -5,7 +5,9 @@ import java.util.concurrent.BlockingQueue;
 
 /**
  * 适当设置阻塞队列长度
- * Created by Administrator on 2017/11/20 0020.
+ *
+ * @author Administrator
+ * @date 2017/11/20 0020
  * 注意：阻塞队列的长度是固定的。
  */
 /*
@@ -17,7 +19,8 @@ public class No129 {
         BlockingQueue<String> bq = new ArrayBlockingQueue<>(5);
         //加入10个元素
         for (int i = 0; i < 10; i++) {
-            bq.add("");    //Exception in thread "main" java.lang.IllegalStateException: Queue full
+            //Exception in thread "main" java.lang.IllegalStateException: Queue full
+            bq.add("");
         }
     }
 }

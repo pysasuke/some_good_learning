@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter3.no49;
 
 
 /**
- * Created by Administrator on 2017/10/17 0017.
+ *
+ * @author Administrator
+ * @date 2017/10/17 0017
  */
 /*
 为什么通过println方法打印一个对象会调用toString方法？
@@ -10,14 +12,15 @@ package com.py.somesuggest.chapter3.no49;
  */
 public class No49 {
     public static void main(String[] args) {
-        System.out.println(new Person("张三"));    //com.py.somesuggest.chapter3.no49.Person@5cad8086
+        //com.py.somesuggest.chapter3.no49.Person@5cad8086
+        System.out.println(new Person("张三"));
     }
 }
 class Person {
     private String name;
 
-    public Person(String _name) {
-        name = _name;
+    public Person(String name) {
+        this.name = name;
     }
 
     public String getName() {
@@ -29,6 +32,7 @@ class Person {
     }
 
     //覆写toString方法
+    @Override
     public String toString(){
         return String.format("%s.name=%s",this.getClass(),name);
     }

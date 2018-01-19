@@ -6,7 +6,9 @@ import java.util.TreeSet;
 
 /**
  * 非稳定排序推荐使用List
- * Created by Administrator on 2017/10/30 0030.
+ *
+ * @author Administrator
+ * @date 2017/10/30 0030
  * 注意：SortedSet中的元素被修改后可能会影响其排序位置。
  */
 /*
@@ -45,8 +47,8 @@ public class No81 {
         //身高
         private int height;
 
-        public Person(int _height) {
-            height = _height;
+        public Person(int height) {
+            this.height = height;
         }
 
         public int getHeight() {

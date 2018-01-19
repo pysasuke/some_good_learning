@@ -4,7 +4,9 @@ import java.lang.reflect.Array;
 
 /**
  * 动态加载不适合数组
- * Created by Administrator on 2017/11/7 0007.
+ *
+ * @author Administrator
+ * @date 2017/11/7 0007
  * 注意：通过反射操作数组使用Array类，不要采用通用的反射处理API。
  */
 public class No105 {

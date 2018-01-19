@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter9.no119;
 
 /**
  * 启动线程stop方法是不可靠的(1.8好像可行)
- * Created by Administrator on 2017/11/14 0014.
+ *
+ * @author Administrator
+ * @date 2017/11/14 0014
  */
 public class No119 {
     public static void main(String[] args) {

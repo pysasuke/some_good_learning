@@ -9,7 +9,9 @@ import java.util.Map;
 
 /**
  * 覆写equals方法必须覆写hashCode方法
- * Created by Administrator on 2017/10/17 0017.
+ *
+ * @author Administrator
+ * @date 2017/10/17 0017
  */
 /*
 对象元素的hashCode方法返回值：
@@ -34,16 +36,18 @@ public class No48 {
         //列表中是否包含
         boolean b1 = list.contains(new Person("张三"));
         boolean b2 = map.containsKey(new Person("张三"));
-        System.out.println(b1);    //true
-        System.out.println(b2);    //false
+        //true
+        System.out.println(b1);
+        //false
+        System.out.println(b2);
     }
 }
 
 class Person {
     private String name;
 
-    public Person(String _name) {
-        name = _name;
+    public Person(String name) {
+        this.name = name;
     }
 
     public String getName() {

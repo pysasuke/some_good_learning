@@ -6,7 +6,9 @@ import java.util.List;
 
 /**
  * 不推荐使用binarySearch对列表进行检索
- * Created by Administrator on 2017/10/29 0029.
+ *
+ * @author Administrator
+ * @date 2017/10/29 0029
  * 注意：从性能方面考虑，binarySearch是最好的选择。
  */
 /*
@@ -24,7 +26,9 @@ public class No74 {
         int index1 =cities.indexOf("广州");
         //binarySearch查找到索引值
         int index2 = Collections.binarySearch(cities, "广州");
-        System.out.println("索引值(indexOf):"+index1);    //索引值(indexOf):1
-        System.out.println("索引值(binarySearch):"+index2);    //索引值(binarySearch):2
+        //索引值(indexOf):1
+        System.out.println("索引值(indexOf):"+index1);
+        //索引值(binarySearch):2
+        System.out.println("索引值(binarySearch):"+index2);
     }
 }

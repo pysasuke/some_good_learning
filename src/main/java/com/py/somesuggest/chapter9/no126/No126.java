@@ -4,7 +4,9 @@ import java.util.concurrent.*;
 
 /**
  * 适时选择不同的线程池来实现
- * Created by Administrator on 2017/11/19 0019.
+ *
+ * @author Administrator
+ * @date 2017/11/19 0019
  */
 /*
 corePoolSize：最小线程数
@@ -74,7 +76,8 @@ public class No126 {
             }
         });
         //获得任务执行后的返回值
-        System.out.println("返回值：" + future.get());    //返回值：success
+        //返回值：success
+        System.out.println("返回值：" + future.get());
         //关闭执行器
         es.shutdown();
     }

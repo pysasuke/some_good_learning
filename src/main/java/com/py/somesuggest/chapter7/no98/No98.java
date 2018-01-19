@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter7.no98;
 
 /**
  * 建议采用的顺序是List<T>、List<?>、List<Object>
- * Created by Administrator on 2017/11/4 0004.
+ *
+ * @author Administrator
+ * @date 2017/11/4 0004
  */
 /*
 1、List<T>是确定的某一个类型

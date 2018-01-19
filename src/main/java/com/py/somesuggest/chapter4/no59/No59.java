@@ -7,7 +7,9 @@ import java.util.Locale;
 
 /**
  * 对字符串排序持一种宽容的心态
- * Created by Administrator on 2017/10/22 0022.
+ *
+ * @author Administrator
+ * @date 2017/10/22 0022
  * 注意：如果排序不一个关键算法，使用Collator类即可。
  */
 public class No59 {

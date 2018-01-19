@@ -5,7 +5,9 @@ import java.lang.reflect.Method;
 
 /**
  * 反射访问属性或方法时将Accessible设置为true
- * Created by Administrator on 2017/11/5 0005.
+ *
+ * @author Administrator
+ * @date 2017/11/5 0005
  * 注意：对于我们已经“习惯”了的代码。多思考一下为什么
  */
 /*
@@ -23,9 +25,11 @@ public class No103 {
         //反射获取方法
         Method m1 = No103.class.getMethod("doStuff");
         //打印是否可访问
-        System.out.println("Accessible=" + m1.isAccessible());    //Accessible=false
+        //Accessible=false
+        System.out.println("Accessible=" + m1.isAccessible());
         m1.setAccessible(true);
         //执行方法
-        m1.invoke(new No103());    //Do Stuff
+        //Do Stuff
+        m1.invoke(new No103());
     }
 }

@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter8.no114;
 
 /**
  * 不要在构造函数中抛出异常
- * Created by Administrator on 2017/11/13 0013.
+ *
+ * @author Administrator
+ * @date 2017/11/13 0013
  * 在构造函数中不要抛异常，尽量曲线救国
  */
 /*

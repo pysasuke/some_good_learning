@@ -4,7 +4,9 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 预防线程死锁
- * Created by Administrator on 2017/11/20 0020.
+ *
+ * @author Administrator
+ * @date 2017/11/20 0020
  */
 /*
 线程死锁需要四个条件：

@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter5.no68;
 
 /**
  * 频繁插入和删除时使用LinkedList
- * Created by Administrator on 2017/10/24 0024.
+ *
+ * @author Administrator
+ * @date 2017/10/24 0024
  */
 /*
 ArrayList：

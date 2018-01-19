@@ -3,18 +3,24 @@ package com.py.somesuggest.chapter1.no14;
 import java.io.Serializable;
 
 /**
- * Created by Administrator on 2017/9/16 0016.
+ *
+ * @author Administrator
+ * @date 2017/9/16 0016
  */
 public class Salary implements Serializable {
     private static final long serialVersionUID = 44663L;
-    //基本工资
+    /**
+     * 基本工资
+     */
     private int basePay;
-    //绩效工资
+    /**
+     * 绩效工资
+     */
     private int bonus;
 
-    public Salary(int _basePay, int _bonus) {
-        basePay = _basePay;
-        bonus = _bonus;
+    public Salary(int basePay, int bonus) {
+        this.basePay = basePay;
+        this.bonus = bonus;
     }
 
     public int getBasePay() {

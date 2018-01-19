@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter9.no123;
 
 /**
  * volatile不能保证数据同步
- * Created by Administrator on 2017/11/15 0015.
+ *
+ * @author Administrator
+ * @date 2017/11/15 0015
  * 注意:volatile不能保证数据是同步的，只能保证线程能够获得最新值。
  */
 public class No123 {
@@ -36,7 +38,9 @@ public class No123 {
 }
 
 class UnsafeThread implements Runnable {
-    //共享资源
+    /**
+     * 共享资源
+     */
     private volatile int count = 0;
 
     @Override

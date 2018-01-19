@@ -5,7 +5,9 @@ import java.lang.reflect.Type;
 
 /**
  * 不需要太多关注反射效率
- * Created by Administrator on 2017/11/7 0007.
+ *
+ * @author Administrator
+ * @date 2017/11/7 0007
  * 注意：反射效率低是个真命题，但因为这一点而不使用它就是个假命题。
  */
 public class No109 {
@@ -15,7 +17,12 @@ public class No109 {
 }
 
 class Utils {
-    //获得一个泛型类的实际泛型类型
+    /**
+     * 获得一个泛型类的实际泛型类型
+     * @param clz
+     * @param <T>
+     * @return
+     */
     public static <T> Class<T> getGenericClassType(Class clz) {
         Type type = clz.getGenericSuperclass();
         if (type instanceof ParameterizedType) {
@@ -30,9 +37,15 @@ class Utils {
     }
 }
 abstract class BaseDao<T>{
-    //获得T的运行期类型
+    /**
+     * 获得T的运行期类型
+     */
     private Class<T> clz = Utils.getGenericClassType(getClass());
-    //根据主键获得一条记录
+
+    /**
+     * 根据主键获得一条记录
+     * @param id
+     */
     public void get(long id){
     }
 }

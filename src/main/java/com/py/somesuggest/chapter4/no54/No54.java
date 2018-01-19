@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter4.no54;
 
 /**
  * 正确使用String、StringBuffer、StringBuilder
- * Created by Administrator on 2017/10/22 0022.
+ *
+ * @author Administrator
+ * @date 2017/10/22 0022
  * 注意：在适当的场景选用字符串类型
  */
 /*

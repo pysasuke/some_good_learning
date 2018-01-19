@@ -2,15 +2,21 @@ package com.py.somesuggest.chapter4.no56;
 
 /**
  * 自由选择字符串拼接方法
- * Created by Administrator on 2017/10/22 0022.
+ *
+ * @author Administrator
+ * @date 2017/10/22 0022
  * 注意：适当地场景使用适当地字符串拼接方式
  */
 public class No56 {
     public static void main(String[] args) {
-        doWithAdd();    //1658
-        doWithConcat();    //478
-        doWithStringBuffer();    //7
-        doWithStringBuilder();    //6
+        //1658
+        doWithAdd();
+        //478
+        doWithConcat();
+        //7
+        doWithStringBuffer();
+        //6
+        doWithStringBuilder();
     }
 
     public static String doWithStringBuilder() {

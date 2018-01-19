@@ -2,11 +2,14 @@ package com.py.somesuggest.chapter6.no85;
 
 /**
  * 小心switch带来的空值异常
- * Created by Administrator on 2017/10/31 0031.
+ *
+ * @author Administrator
+ * @date 2017/10/31 0031
  */
 public class No85 {
     public static void main(String[] args) {
-        doSport(null);    //Exception in thread "main" java.lang.NullPointerException
+        //Exception in thread "main" java.lang.NullPointerException
+        doSport(null);
     }
 
     /*
@@ -22,7 +25,7 @@ public class No85 {
             case Spring:
                 System.out.println("春天放风筝");
                 break;
-            case Summner:
+            case Summer:
                 System.out.println("夏天游泳");
                 break;
             case Autumn:
@@ -39,5 +42,5 @@ public class No85 {
 }
 
 enum Season {
-    Spring, Summner, Autumn, Winter;
+    Spring, Summer, Autumn, Winter
 }

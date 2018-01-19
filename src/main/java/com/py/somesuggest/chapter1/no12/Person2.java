@@ -3,10 +3,12 @@ package com.py.somesuggest.chapter1.no12;
 import java.io.Serializable;
 
 /**
- * Created by Administrator on 2017/9/10 0010.
+ *
+ * @author Administrator
+ * @date 2017/9/10 0010
  */
 public class Person2 implements Serializable {
-    private static final long serialVersionUID = 91282334l;
+    private static final long serialVersionUID = 91282334L;
     //不变量初始不赋值
     public final String name;
 
@@ -17,6 +19,7 @@ public class Person2 implements Serializable {
      */
     public Person2() {
 //        name = "混世魔王";
-        name ="德天使";    //NOT DO THIS  反序列化时构造函数不会执行,若序列化后值被修改，值还是序列化时的值
+        //NOT DO THIS  反序列化时构造函数不会执行,若序列化后值被修改，值还是序列化时的值
+        name ="德天使";
     }
 }

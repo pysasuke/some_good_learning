@@ -9,7 +9,9 @@ import java.util.List;
 
 /**
  * 集合中的元素必须做到compareTo和equals同步
- * Created by Administrator on 2017/10/29 0029.
+ *
+ * @author Administrator
+ * @date 2017/10/29 0029
  * 注意：实现了compareTo方法，就应该覆写equals方法，确保两者同步。
  */
 /*
@@ -33,20 +35,26 @@ public class No75 {
         int index1 = cities.indexOf(city);
         //binarySearch查找到索引值
         int index2 = Collections.binarySearch(cities, city);
-        System.out.println("索引值(indexOf):" + index1);    //索引值(indexOf):0
-        System.out.println("索引值(binarySearch):" + index2);    //索引值(binarySearch):1
+        //索引值(indexOf):0
+        System.out.println("索引值(indexOf):" + index1);
+        //索引值(binarySearch):1
+        System.out.println("索引值(binarySearch):" + index2);
     }
 }
 
 class City implements Comparable<City> {
-    //城市编码
+    /**
+     * 城市编码
+     */
     private String code;
-    //城市名称
+    /**
+     * 城市名称
+     */
     private String name;
 
-    public City(String _code, String _name) {
-        code = _code;
-        name = _name;
+    public City(String code, String name) {
+        this.code = code;
+        this.name = name;
     }
 
     public String getCode() {
@@ -88,7 +96,8 @@ class City implements Comparable<City> {
         City city = (City) obj;
         //根据code判断是否相等
         return new EqualsBuilder()
-//                .append(code, city.code)    //NOT DO THIS    集合中的元素必须做到compareTo和equals同步
+                //NOT DO THIS    集合中的元素必须做到compareTo和equals同步
+//                .append(code, city.code)
                 .append(name, city.name)
                 .isEquals();
     }

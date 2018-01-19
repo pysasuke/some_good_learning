@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter12.no149;
 
 /**
  * 依赖抽象而不是实现
- * Created by Administrator on 2017/11/28 0028.
+ *
+ * @author Administrator
+ * @date 2017/11/28 0028
  */
 /*
 依赖倒置原则：

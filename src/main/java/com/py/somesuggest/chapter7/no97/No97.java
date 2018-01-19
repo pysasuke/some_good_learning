@@ -5,7 +5,9 @@ import java.util.List;
 
 /**
  * 警惕泛型是不能协变和逆变的
- * Created by Administrator on 2017/11/4 0004.
+ *
+ * @author Administrator
+ * @date 2017/11/4 0004
  * 注意：Java的泛型是不支持协变和逆变的，只是能够实现协变和逆变(使用通配符模拟)
  */
 //协变是用一个窄类型替换宽类型，而逆变则是用宽类型覆盖窄类型。

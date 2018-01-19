@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter12.no151;
 
 /**
  * 以技术员自律而不是人工
- * Created by Administrator on 2017/11/28 0028.
+ *
+ * @author Administrator
+ * @date 2017/11/28 0028
  */
 /*
 1.熟悉工具

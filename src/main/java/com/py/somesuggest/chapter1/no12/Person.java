@@ -5,7 +5,9 @@ import java.io.Serializable;
 /**
  * 避免用序列化类在构造函数中为不变量赋值
  * 注意：在序列化中，不使用构造函数为final变量赋值
- * Created by Administrator on 2017/9/10 0010.
+ *
+ * @author Administrator
+ * @date 2017/9/10 0010
  */
 public class Person implements Serializable {
     private static final long serialVersionUID = 71282334L;

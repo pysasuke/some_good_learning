@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter8.no115;
 
 /**
  * 使用Throwable获得栈信息
- * Created by Administrator on 2017/11/13 0013.
+ *
+ * @author Administrator
+ * @date 2017/11/13 0013
  */
 public class No115 {
 }
@@ -13,7 +15,7 @@ class Foo {
         StackTraceElement[] sts = new Throwable().getStackTrace();
         //检查是否是m1方法调用
         for (StackTraceElement st : sts) {
-            if (st.getMethodName().equals("m1")) {
+            if ("m1".equals(st.getMethodName())) {
                 return true;
             }
         }
@@ -23,14 +25,20 @@ class Foo {
     }
 }
 
-//调用者
+/**
+ * 调用者
+ */
 class Invoker {
-    //该方法打印出true
+    /**
+     * 该方法打印出true
+     */
     public static void m1() {
         System.out.println(Foo.m());
     }
 
-    //该方法打印出false
+    /**
+     * 该方法打印出false
+     */
     public static void m2() {
         System.out.println(Foo.m());
     }

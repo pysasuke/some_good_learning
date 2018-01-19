@@ -1,13 +1,13 @@
 package com.py.somesuggest.chapter5.no80;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import java.util.Vector;
 
 /**
  * 多线程使用Vector或HashTable
- * Created by Administrator on 2017/10/30 0030.
+ *
+ * @author Administrator
+ * @date 2017/10/30 0030
  * 注意：多线程环境下考虑使用Vector或HashTable
  */
 /*
@@ -36,6 +36,7 @@ public class No80 {
             @Override
             public void run() {
                 for (String ticket : tickets) {
+                    //// TODO: 2018/1/19  写法好像有问题
                     tickets.remove(ticket);
                 }
             }
@@ -47,6 +48,7 @@ public class No80 {
         //10个窗口售票
         for (int i = 0; i < 10; i++) {
             new Thread() {
+                @Override
                 public void run() {
                     while (true) {
                         System.out.println(Thread.currentThread().getId() + "--" + tickets.remove(0));

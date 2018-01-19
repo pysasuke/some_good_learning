@@ -5,7 +5,9 @@ import java.util.List;
 
 /**
  * equals应该考虑null值情景
- * Created by Administrator on 2017/10/16 0016.
+ *
+ * @author Administrator
+ * @date 2017/10/16 0016
  */
 public class No46 {
     public static void main(String[] args) {
@@ -14,16 +16,18 @@ public class No46 {
         List<Person> personList = new ArrayList<>();
         personList.add(p1);
         personList.add(p2);
-        System.out.println("列表中是否包含张三：" + personList.contains(p1));    //列表中是否包含张三：true
-        System.out.println("列表中是否包含张三 ：" + personList.contains(p2));    //Exception in thread "main" java.lang.NullPointerException
+        //列表中是否包含张三：true
+        System.out.println("列表中是否包含张三：" + personList.contains(p1));
+        //Exception in thread "main" java.lang.NullPointerException
+        System.out.println("列表中是否包含张三 ：" + personList.contains(p2));
     }
 }
 
 class Person {
     private String name;
 
-    public Person(String _name) {
-        name = _name;
+    public Person(String name) {
+        this.name = name;
     }
 
     public String getName() {

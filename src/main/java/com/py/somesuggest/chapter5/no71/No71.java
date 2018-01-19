@@ -6,7 +6,9 @@ import java.util.List;
 
 /**
  * 推荐使用subList处理局部列表
- * Created by Administrator on 2017/10/25 0025.
+ *
+ * @author Administrator
+ * @date 2017/10/25 0025
  */
 public class No71 {
     public static void main(String[] args) {

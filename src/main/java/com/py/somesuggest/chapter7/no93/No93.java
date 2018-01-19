@@ -5,7 +5,9 @@ import java.util.List;
 
 /**
  * Java的泛型是类型擦除的
- * Created by Administrator on 2017/11/4 0004.
+ *
+ * @author Administrator
+ * @date 2017/11/4 0004
  */
 /*
 编译后所以的泛型类型都会做相应的转换，转换规则如下：
@@ -15,7 +17,10 @@ import java.util.List;
     List<T extends Serializable & Cloneable>擦除后为List<Serializable>。
  */
 public class No93 {
-    //arrayMethod接收数组参数，并进行重载
+    /**
+     * arrayMethod接收数组参数，并进行重载
+     * @param strArray
+     */
     public void arrayMethod(String[] strArray) {
     }
 
@@ -45,7 +50,8 @@ public class No93 {
         //(1)泛型的class对象是相同的：List<String>和List<Integer>擦除后的类型都是List,没有任何区别。
         List<String> ls = new ArrayList<>();
         List<Integer> li = new ArrayList<>();
-        System.out.println(li.getClass() == ls.getClass());    //true
+        //true
+        System.out.println(li.getClass() == ls.getClass());
         //(2)泛型数组初始化时不能声明泛型类型：可以声明一个带泛型参数的数组，但是不能初始化该数组，因为执行了类型擦除操作，List<Object>[] 与List<String>[]就是同一回事了，编译器拒绝如此声明。
         //(3)instanceof不允许存在泛型参数：不能通过编译，原因也是泛型类型被擦除了。
 //        System.out.println(ls instanceof List<String>);    //NOT DO THIS

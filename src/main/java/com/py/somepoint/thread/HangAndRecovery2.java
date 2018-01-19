@@ -8,12 +8,16 @@ public class HangAndRecovery2 extends Object implements Runnable {
 
     private volatile int firstVal;
     private volatile int secondVal;
-    private volatile boolean suspended;/*增加标志位，用来实现线程的挂起和恢复*/
+    /**
+     * 增加标志位，用来实现线程的挂起和恢复
+     */
+    private volatile boolean suspended;
 
     public boolean areValuesEqual() {
         return (firstVal == secondVal);
     }
 
+    @Override
     public void run() {
         try {
             suspended = false;
@@ -60,7 +64,9 @@ public class HangAndRecovery2 extends Object implements Runnable {
         /*这是一个“繁忙等待”技术的示例。
         它是非等待条件改变的最佳途径，因为它会不断请求处理器周期地执行检查，
         更佳的技术是：使用Java的内置“通知-等待”机制*/
-        while (suspended) Thread.sleep(200);
+        while (suspended) {
+            Thread.sleep(200);
+        }
     }
 
     public static void main(String[] args) {
@@ -86,7 +92,8 @@ public class HangAndRecovery2 extends Object implements Runnable {
                 Thread.sleep((long) (Math.random() * 2000.0));
             } catch (InterruptedException x) { /*略*/ }
         }
-        System.exit(0); /*退出应用程序*/
+        /*退出应用程序*/
+        System.exit(0);
     }
 
 }

@@ -3,12 +3,16 @@ package com.py.somesuggest.chapter1.no11;
 import java.io.*;
 
 /**
- * Created by Administrator on 2017/9/10 0010.
+ *
+ * @author Administrator
+ * @date 2017/9/10 0010
  */
 public class SerializationUtils {
     private static String FILE_NAME = "E:/object.bin";
 
-    //序列化
+    /**
+     * 序列化
+     */
     public static void writeObject(Serializable s) {
         try {
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME));
@@ -19,6 +23,10 @@ public class SerializationUtils {
         }
     }
 
+    /**
+     * 反序列化
+     * @return
+     */
     public static Object readObject() {
         Object obj = null;
         //反序列化

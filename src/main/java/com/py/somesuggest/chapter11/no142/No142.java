@@ -12,7 +12,9 @@ import java.util.Locale;
 
 /**
  * 推荐使用Joda日期时间扩展包
- * Created by Administrator on 2017/11/26 0026.
+ *
+ * @author Administrator
+ * @date 2017/11/26 0026
  */
 /*
 DateTime是一个不可变类型，与String非常相似，即使通过plusXXX、minusXX等方法进行操作，dt对象仍然不会变，只是新生成一个DateTime对象而已
@@ -32,26 +34,34 @@ public class No142 {
     private void localTimeTest() {
         //当前时间戳
         DateTime dt = new DateTime();
-        System.out.println(dt);    //2017-11-26T21:53:19.206+08:00
+        //2017-11-26T21:53:19.206+08:00
+        System.out.println(dt);
         //输出英文日期
-        System.out.println(dt.dayOfWeek().getAsText(Locale.ENGLISH));    //Sunday
+        //Sunday
+        System.out.println(dt.dayOfWeek().getAsText(Locale.ENGLISH));
         //本地日期格式
-        System.out.println(dt.toLocalDate());    //2017-11-26
+        //2017-11-26
+        System.out.println(dt.toLocalDate());
         //日期格式化
-        System.out.println(dt.toString(DateTimeFormat.forPattern("yyyy年M月d日")));    //2017年11月26日
+        //2017年11月26日
+        System.out.println(dt.toString(DateTimeFormat.forPattern("yyyy年M月d日")));
     }
 
     private void dateCalTest() {
         //当前时间戳
         DateTime dt = new DateTime();
         //加100小时是星期几
-        System.out.println(dt.plusHours(100).dayOfWeek().getAsText());    //星期五
+        //星期五
+        System.out.println(dt.plusHours(100).dayOfWeek().getAsText());
         //100天后的日期
-        System.out.println(dt.plusDays(100).toLocalDate());    //2018-03-06
+        //2018-03-06
+        System.out.println(dt.plusDays(100).toLocalDate());
         //10年前的今天是星期几
-        System.out.println(dt.minusYears(10).dayOfWeek().getAsText());    //星期一
+        //星期一
+        System.out.println(dt.minusYears(10).dayOfWeek().getAsText());
         //离某个时间还有多少小时
-        System.out.println(Hours.hoursBetween(dt, new DateTime("2017-12-21")).getHours());    //578
+        //578
+        System.out.println(Hours.hoursBetween(dt, new DateTime("2017-12-21")).getHours());
 
         //当前可变时间
         MutableDateTime mdt = new MutableDateTime();
@@ -91,9 +101,11 @@ public class No142 {
         //当前时间戳
         DateTime dt = new DateTime();
         //此时伦敦市的时间
-        System.out.println(dt.withZone(DateTimeZone.forID("Europe/London")));    //2017-11-26T14:07:50.460Z
+        //2017-11-26T14:07:50.460Z
+        System.out.println(dt.withZone(DateTimeZone.forID("Europe/London")));
         //计算出标准时间
-        System.out.println(dt.withZone(DateTimeZone.UTC));    //2017-11-26T14:07:50.460Z
+        //2017-11-26T14:07:50.460Z
+        System.out.println(dt.withZone(DateTimeZone.UTC));
 
         //Joda的DateTime转为JDK的Date
         Date jdkDate = dt.toDate();

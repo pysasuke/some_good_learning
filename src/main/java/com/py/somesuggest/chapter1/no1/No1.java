@@ -3,7 +3,9 @@ package com.py.somesuggest.chapter1.no1;
 /**
  * 不要在常量和变量中出现易混淆的字母
  * 注意：字母"l"作为长整型标志时务必大写
- * Created by Administrator on 2017/9/10 0010.
+ *
+ * @author Administrator
+ * @date 2017/9/10 0010
  */
 public class No1 {
     public static void main(String[] args) {

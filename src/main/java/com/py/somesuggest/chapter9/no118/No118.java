@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter9.no118;
 
 /**
  * 不推荐覆写start方法
- * Created by Administrator on 2017/11/14 0014.
+ *
+ * @author Administrator
+ * @date 2017/11/14 0014
  * 注意：继承自Thread类的多线程类不必覆写start方法。
  */
 /*

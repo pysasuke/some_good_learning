@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter8.no111;
 
 /**
  * 采用异常链传递异常
- * Created by Administrator on 2017/11/8 0008.
+ *
+ * @author Administrator
+ * @date 2017/11/8 0008
  */
 public class No111 {
 

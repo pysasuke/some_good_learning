@@ -6,12 +6,16 @@ import java.util.TreeSet;
 
 /**
  * 多种最值算法，适时选择
- * Created by Administrator on 2017/10/23 0023.
+ *
+ * @author Administrator
+ * @date 2017/10/23 0023
  * 注意：最值计算时使用集合最简单，使用数组性能最优
  */
 public class No64 {
 
-    //自行实现，快速查找最大值
+    /**
+     * 自行实现，快速查找最大值
+     */
     public static int max1(int[] data) {
         int max = data[0];
         for (int i : data) {
@@ -20,7 +24,11 @@ public class No64 {
         return max;
     }
 
-    //先排序，后取值
+    /**
+     * 先排序，后取值
+     * @param data
+     * @return
+     */
     public static int max2(int[] data) {
         //先排序
         /*
@@ -30,7 +38,12 @@ public class No64 {
         //然后取值
         return data[data.length - 1];
     }
-    //先剔除重复数据，然后再排序
+
+    /**
+     * 先剔除重复数据，然后再排序
+     * @param data
+     * @return
+     */
     public static int getSecond(Integer[] data) {
         //转换为列表
         List<Integer> dataList = Arrays.asList(data);

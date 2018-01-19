@@ -37,7 +37,7 @@ public class NotCreateObjectInLoopTest {
 
     private List<User> getList(int count) {
         List<User> list = new ArrayList<User>(count);
-        User user = null;
+        User user;
         for (int i = 0; i <= count; i++) {
             user = new User();
             user.setAge(i);
@@ -62,7 +62,7 @@ public class NotCreateObjectInLoopTest {
 
     private List<User> getListFromAnother2(List<User> list) {
         List<User> list1 = new ArrayList<User>(list.size());
-        User user = null;
+        User user;
         for (User user1 : list) {
             user = new User();
             user.setAge(user1.getAge() + 1);

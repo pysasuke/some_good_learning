@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter12.no145;
 
 /**
  * 不要完全依靠单元测试来发现问题
- * Created by Administrator on 2017/11/28 0028.
+ *
+ * @author Administrator
+ * @date 2017/11/28 0028
  */
 /*
 1.单元测试不可能测试所有的场景(路径)

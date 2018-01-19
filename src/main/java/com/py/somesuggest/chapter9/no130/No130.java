@@ -7,7 +7,9 @@ import java.util.concurrent.*;
 
 /**
  * 使用CountDownLatch协调子线程
- * Created by Administrator on 2017/11/21 0021.
+ *
+ * @author Administrator
+ * @date 2017/11/21 0021
  */
 /*
 CountDownLatch对于多个子任务的计算特别有效，比如一个异步任务需要拆分成10个子任务执行，主任务必须要知道子任务是否完成，
@@ -15,14 +17,18 @@ CountDownLatch对于多个子任务的计算特别有效，比如一个异步任
  */
 public class No130 {
     static class Runner implements Callable<Integer> {
-        //开始信号
+        /**
+         * 开始信号
+         */
         private CountDownLatch begin;
-        //结束信号
+        /**
+         * 结束信号
+         */
         private CountDownLatch end;
 
-        public Runner(CountDownLatch _begin, CountDownLatch _end) {
-            begin = _begin;
-            end = _end;
+        public Runner(CountDownLatch begin, CountDownLatch end) {
+            this.begin = begin;
+            this.end = end;
         }
 
         @Override

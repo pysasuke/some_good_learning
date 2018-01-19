@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter7.no99;
 
 /**
  * 严格限定泛型类型采用多重界限
- * Created by Administrator on 2017/11/4 0004.
+ *
+ * @author Administrator
+ * @date 2017/11/4 0004
  */
 //只有上界才有此限定，下界没有多重限定的情况。
 public class No99 {
@@ -18,19 +20,31 @@ public class No99 {
     }
 }
 
-//职员
+/**
+ * 职员
+ */
 interface Staff {
-    //工资
-    public int getSalary();
+    /**
+     * 工资
+     * @return
+     */
+    int getSalary();
 }
 
-//乘客
+/**
+ * 乘客
+ */
 interface Passenger {
-    //是否是站立状态
-    public boolean isStanding();
+    /**
+     * 是否是站立状态
+     * @return
+     */
+    boolean isStanding();
 }
 
-//定义“我”这个类型的人
+/**
+ * 定义“我”这个类型的人
+ */
 class Me implements Staff, Passenger {
 
     @Override

@@ -6,7 +6,9 @@ import java.util.List;
 
 /**
  * 数组的真实类型必须是泛型类型的子类型
- * Created by Administrator on 2017/11/5 0005.
+ *
+ * @author Administrator
+ * @date 2017/11/5 0005
  */
 public class No100 {
     public static void main(String[] args) {

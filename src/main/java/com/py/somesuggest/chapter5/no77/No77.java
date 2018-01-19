@@ -7,7 +7,9 @@ import java.util.Random;
 
 /**
  * 使用shuffle打乱列表
- * Created by Administrator on 2017/10/29 0029.
+ *
+ * @author Administrator
+ * @date 2017/10/29 0029
  */
 public class No77 {
     public static void main(String[] args) {

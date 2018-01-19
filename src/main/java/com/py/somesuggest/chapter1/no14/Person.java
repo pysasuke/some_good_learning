@@ -7,18 +7,25 @@ import java.io.Serializable;
 
 /**
  * 使用序列化类的私有方法巧妙解决部分属性持久化问题
- * Created by Administrator on 2017/9/16 0016.
+ *
+ * @author Administrator
+ * @date 2017/9/16 0016
  */
 public class Person implements Serializable {
     private static final long serialVersionUID = 60407L;
-    //姓名
+    /**
+     * 姓名
+     */
     private String name;
-    //薪水
+    /**
+     *
+     * 薪水
+     */
     private Salary salary;
 
-    public Person(String _name, Salary _salary) {
-        name = _name;
-        salary = _salary;
+    public Person(String name, Salary salary) {
+        this.name = name;
+        this.salary = salary;
     }
 
     public String getName() {
@@ -37,13 +44,22 @@ public class Person implements Serializable {
         this.salary = salary;
     }
 
-    //序列化委托方法
+    /**
+     * 序列化委托方法
+     * @param out
+     * @throws IOException
+     */
     private void writeObject(ObjectOutputStream out) throws IOException {
         out.defaultWriteObject();
         out.writeInt(salary.getBasePay());
     }
 
-    //反序列化时委托方法
+    /**
+     * 反序列化时委托方法
+     * @param in
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
     private void readObject(ObjectInputStream in)throws IOException,ClassNotFoundException{
         in.defaultReadObject();
         salary= new Salary(in.readInt(),0);

@@ -27,7 +27,8 @@ public class ChangeToString {
         startTime = System.currentTimeMillis();
         for (int j = 0; j < loopTime; j++)
         {
-            String str = i.toString();    //最快
+            //最快
+            String str = i.toString();
         }
         System.out.println("Integer.toString()：" + (System.currentTimeMillis() - startTime) + "ms");
         startTime = System.currentTimeMillis();

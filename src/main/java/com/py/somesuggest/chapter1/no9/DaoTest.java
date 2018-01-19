@@ -8,7 +8,9 @@ import static org.junit.Assert.assertFalse;
 //文中使用该语句
 //import static org.junit.Assert.*;
 /**
- * Created by Administrator on 2017/9/10 0010.
+ *
+ * @author Administrator
+ * @date 2017/9/10 0010
  */
 public class DaoTest {
     @Test

@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter9.no122;
 
 /**
  * 使用线程异常处理器提升系统可靠性
- * Created by Administrator on 2017/11/15 0015.
+ *
+ * @author Administrator
+ * @date 2017/11/15 0015
  */
 public class No122 {
     public static void main(String[] args) {
@@ -11,7 +13,9 @@ public class No122 {
 }
 
 class TcpServer implements Runnable {
-    //创建后即运行
+    /**
+     * 创建后即运行
+     */
     public TcpServer() {
         Thread t = new Thread(this);
         //设置该线程出现运行期异常(也就是Uncaught Exception)时，由TcpServerExceptionHandler异常处理器来处理

@@ -3,7 +3,9 @@ package com.py.somesuggest.chapter3.no44;
 import java.io.*;
 
 /**
- * Created by Administrator on 2017/10/16 0016.
+ *
+ * @author Administrator
+ * @date 2017/10/16 0016
  */
 public class CloneUtils {
     //拷贝一个对象

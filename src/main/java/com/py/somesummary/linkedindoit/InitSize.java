@@ -7,16 +7,16 @@ import java.util.List;
 
 /**
  * 在初始化的时候预估集合的大小
+ *
  * @author pysasuke
  * @create 2017-09-06 13:17
  */
 public class InitSize {
 
     void addObjects1(List<Person> input) {
-        HashMap<String, Person> _map;
-        _map = new HashMap<String, Person>();
+        HashMap<String, Person> map = new HashMap<>();
         for (Person person : input) {
-            _map.put(person.getId(), person);
+            map.put(person.getId(), person);
         }
 
     }
@@ -25,9 +25,10 @@ public class InitSize {
     //将这个 HashMap 初始化预期的大小可以避免再次哈希所带来的开销。
     //初始化大小可以设置为输入的数组大小除以默认加载因子的结果值（这里取0.7）：
     void addObjects2(List<Person> input) {
-        HashMap<String, Person> _map;
-        _map = new HashMap<String, Person>((int) Math.ceil(input.size() / 0.7));
-        for (Person person : input) _map.put(person.getId(), person);
+        HashMap<String, Person> map = new HashMap<>((int) Math.ceil(input.size() / 0.7));
+        for (Person person : input) {
+            map.put(person.getId(), person);
+        }
 
     }
 }

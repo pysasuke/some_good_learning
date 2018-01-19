@@ -4,7 +4,9 @@ import java.util.List;
 
 /**
  * 不同的场景使用不同的泛型通配符
- * Created by Administrator on 2017/11/4 0004.
+ *
+ * @author Administrator
+ * @date 2017/11/4 0004
  */
 public class No96 {
     //(1)泛型结构只参与“读”操作则限定上界(extends关键值)

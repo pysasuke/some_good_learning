@@ -4,7 +4,9 @@ import java.lang.annotation.*;
 
 /**
  * 小心注解继承
- * Created by Administrator on 2017/11/2 0002.
+ *
+ * @author Administrator
+ * @date 2017/11/2 0002
  */
 /*
 总体上来说，使用@Inherited元注解的弊大于利，特别是一个类的继承层次较深时，
@@ -12,13 +14,14 @@ import java.lang.annotation.*;
  */
 public class No90 {
     public static void main(String[] args) {
-        Bird bird = BirdNest.Sparrow.reproduce();
+        AbstractBird bird = BirdNest.Sparrow.reproduce();
         Desc.Color color = bird.getColor();
         /*
         因为我们在注解上加了@Inherited，
         它表示的意思是我们只要把注解@Desc加到父类Bird上，它的所有子类都会自动从父类继承@Desc注解，不需要显示声明
          */
-        System.out.println("Bird's color is:" + color);    //Bird's color is:White
+        //Bird's color is:White
+        System.out.println("Bird's color is:" + color);
     }
 }
 
@@ -37,21 +40,26 @@ public class No90 {
 }
 
 @Desc(c = Desc.Color.White)
-abstract class Bird {
-    //鸟的颜色
+abstract class AbstractBird {
+    /**
+     * 鸟的颜色
+     * @return
+     */
     public abstract Desc.Color getColor();
 }
 
-class Sparrow extends Bird {
+class Sparrow extends AbstractBird {
     private Desc.Color color;
 
-    //默认是浅色
+    /**
+     * 默认是浅色
+     */
     public Sparrow() {
         color = Desc.Color.Grayish;
     }
 
-    public Sparrow(Desc.Color _color) {
-        color = _color;
+    public Sparrow(Desc.Color color) {
+        this.color = color;
     }
 
     @Override
@@ -60,12 +68,17 @@ class Sparrow extends Bird {
     }
 }
 
-//鸟巢，工厂方式模式
+/**
+ * 鸟巢，工厂方式模式
+ */
 enum BirdNest {
     Sparrow;
 
-    //鸟类繁殖
-    public Bird reproduce() {
+    /**
+     * 鸟类繁殖
+     * @return
+     */
+    public AbstractBird reproduce() {
         Desc bd = Sparrow.class.getAnnotation(Desc.class);
         return bd == null ? new Sparrow() : new Sparrow(bd.c());
     }

@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 /**
  * 注意Class类的特殊性
- * Created by Administrator on 2017/11/5 0005.
+ *
+ * @author Administrator
+ * @date 2017/11/5 0005
  */
 /*
 1.无构造函数
@@ -23,9 +25,12 @@ import java.util.ArrayList;
 public class No101 {
     public static void main(String[] args) {
         //类的属性class所引用的对象与实例对象的getClass返回值相同
-        System.out.println(String.class.equals(new String("").getClass()));    //true
-        System.out.println("ABC".getClass().equals(String.class));    //true
+        //true
+        System.out.println(String.class.equals(new String("").getClass()));
+        //true
+        System.out.println("ABC".getClass().equals(String.class));
         //class实例对象不区分泛型
-        System.out.println(ArrayList.class.equals(new ArrayList<String>().getClass()));    //true
+        //true
+        System.out.println(ArrayList.class.equals(new ArrayList<String>().getClass()));
     }
 }

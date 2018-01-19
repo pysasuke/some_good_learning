@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter4.no55;
 
 /**
  * 注意字符串的位置
- * Created by Administrator on 2017/10/22 0022.
+ *
+ * @author Administrator
+ * @date 2017/10/22 0022
  * 注意：在"+"表达式中，String字符串具有最高优先级
  */
 /*
@@ -14,7 +16,9 @@ public class No55 {
     public static void main(String[] args) {
         String str1 = 1 + 2 + " apples";
         String str2 = "apples:" + 1 + 2;
-        System.out.println(str1);    //3 apples
-        System.out.println(str2);    //apples:12
+        //3 apples
+        System.out.println(str1);
+        //apples:12
+        System.out.println(str2);
     }
 }

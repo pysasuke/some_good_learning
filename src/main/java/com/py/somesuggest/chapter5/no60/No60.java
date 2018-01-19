@@ -4,7 +4,9 @@ import java.util.List;
 
 /**
  * 性能考虑，数组首选
- * Created by Administrator on 2017/10/22 0022.
+ *
+ * @author Administrator
+ * @date 2017/10/22 0022
  * 性能要求较高的场景中使用数组代替集合。
  */
 //在实际测试中发现：对基本类型进行求和计算时，数组的效率是集合的10倍

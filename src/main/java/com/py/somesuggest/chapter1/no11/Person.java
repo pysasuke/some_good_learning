@@ -1,11 +1,14 @@
 package com.py.somesuggest.chapter1.no11;
 
 import java.io.Serializable;
+import java.lang.annotation.Native;
 
 /**
  * 养成良好习惯，显式声明UID
  * 注意：显式声明serialVersionUID可以避免对象不一致，但尽量不要以这种方式向JVM"撒谎"
- * Created by Administrator on 2017/9/10 0010.
+ *
+ * @author Administrator
+ * @date 2017/9/10 0010
  */
 public class Person implements Serializable {
     //流标识符
@@ -14,7 +17,9 @@ public class Person implements Serializable {
     如果相同，则认为此类没有发生改变，可以把数据流load为实例对象；如果不相同，对不起，我
     JVM不干了，抛出异常：java.io.InvalidClassException
     */
-    private static final long serialVersionUID = 55799L;    //显式声明
+    //显式声明
+    @Native
+    private static final long serialVersionUID = 55799L;
     private String name;
     private int age;
 

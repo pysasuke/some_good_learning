@@ -7,7 +7,9 @@ import java.util.Map;
 
 /**
  * 减少HashMap中元素的数量
- * Created by Administrator on 2017/10/29 0029.
+ *
+ * @author Administrator
+ * @date 2017/10/29 0029
  * 尽量让HashMap中的元素少量并简单
  */
 /*

@@ -5,7 +5,9 @@ import java.util.List;
 
 /**
  * 使用valueOf前必须进行校验
- * Created by Administrator on 2017/10/31 0031.
+ *
+ * @author Administrator
+ * @date 2017/10/31 0031
  */
 /*
 valueOf方法会把一个String类型的名称转变为枚举项，也就是在枚举项中查找字面值与该参数相等的枚举项。
@@ -18,7 +20,8 @@ public class No87 {
         for (String name : params) {
             //查找字面值与name相同的枚举项
             if (Season.contains(name)) {
-                Season s = Season.valueOf(name);    //Exception in thread "main" java.lang.IllegalArgumentException: No enum constant com.py.somesuggest.chapter6.no87.Season.summer
+                //Exception in thread "main" java.lang.IllegalArgumentException: No enum constant com.py.somesuggest.chapter6.no87.Season.summer
+                Season s = Season.valueOf(name);
                 if (s != null) {
                     //有该枚举值
                     System.out.println(s);

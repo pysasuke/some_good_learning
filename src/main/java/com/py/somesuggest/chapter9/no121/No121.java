@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter9.no121;
 
 /**
  * 线程优先级只使用三个等级
- * Created by Administrator on 2017/11/14 0014.
+ *
+ * @author Administrator
+ * @date 2017/11/14 0014
  * 注意：线程优先级推荐使用MIN_PRIORITY、NORM_PRIORITY、MAX_PRIORITY三个级别，不建议使用其他7个数字。
  */
 /*
@@ -20,9 +22,9 @@ public class No121 {
 
 class TestThread implements Runnable {
     //启动线程
-    public void start(int _priority) {
+    public void start(int priority) {
         Thread t = new Thread(this);
-        t.setPriority(_priority);
+        t.setPriority(priority);
         t.start();
     }
 

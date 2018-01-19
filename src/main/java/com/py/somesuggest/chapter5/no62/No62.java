@@ -6,7 +6,9 @@ import java.util.Arrays;
 
 /**
  * 警惕数组的浅拷贝
- * Created by Administrator on 2017/10/23 0023.
+ *
+ * @author Administrator
+ * @date 2017/10/23 0023
  */
 //通过copyOf方法产生的数组是一个浅拷贝：基本类型是直接拷贝值，其他都是拷贝引用地址
 public class No62 {
@@ -22,25 +24,34 @@ public class No62 {
         Balloon[] box2 = Arrays.copyOf(box1, box1.length);
         //修改最后一个气球颜色
         box2[6].setColor(Color.Blue);
-        System.out.println(box1[6]);    //com.py.somesuggest.chapter5.no62.Balloon@78308db1[编号=6,颜色=Blue]
+        //com.py.somesuggest.chapter5.no62.Balloon@78308db1[编号=6,颜色=Blue]
+        System.out.println(box1[6]);
     }
 }
 
-//气球颜色
+/**
+ * 气球颜色枚举
+ */
 enum Color {
-    Red, Orange, Yellow, Green, Blue, Indigo, Biolet;
+    Red, Orange, Yellow, Green, Blue, Indigo, Purple
 }
 
-//气球
+/**
+ * 气球
+ */
 class Balloon {
-    //编号
+    /**
+     * 编号
+     */
     private int id;
-    //颜色
+    /**
+     * 颜色
+     */
     private Color color;
 
-    public Balloon(Color _color, int _id) {
-        color = _color;
-        id = _id;
+    public Balloon(Color color, int id) {
+        this.color = color;
+        this.id = id;
     }
 
     public int getId() {
@@ -60,6 +71,7 @@ class Balloon {
     }
 
     //apache-common包下的ToStringBuilder重写toString方法
+    @Override
     public String toString() {
         return new ToStringBuilder(this).append("编号", id).append("颜色", color).toString();
     }

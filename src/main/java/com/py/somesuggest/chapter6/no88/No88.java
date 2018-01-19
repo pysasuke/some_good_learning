@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter6.no88;
 
 /**
  * 用枚举实现工厂方法模式更简洁
- * Created by Administrator on 2017/10/31 0031.
+ *
+ * @author Administrator
+ * @date 2017/10/31 0031
  * 注意：下一次，使用枚举来实现工厂方法模式。
  */
 public class No88 {
@@ -16,24 +18,36 @@ public class No88 {
     }
 }
 
-//抽象产品
+/**
+ * 抽象产品
+ */
 interface Car {
 
 }
 
-//具体产品类
+/**
+ * 具体产品类
+ */
 class FordCar implements Car {
 
 }
 
-//具体产品类
+/**
+ * 具体产品类
+ */
 class BuickCar implements Car {
 
 }
 
-//工厂类(常用工厂方法模式)
+/**
+ * 工厂类(常用工厂方法模式)
+ */
 class CarFactory {
-    //生产汽车
+    /**
+     * 生产汽车
+     * @param c
+     * @return
+     */
     public static Car createCar(Class<? extends Car> c) {
         try {
             return (Car) c.newInstance();
@@ -67,11 +81,13 @@ enum CarFactory1 {
 //(2)通过抽象方法生成产品
 enum CarFactory2 {
     FordCar {
+        @Override
         public Car create() {
             return new FordCar();
         }
     },
     BuickCar {
+        @Override
         public Car create() {
             return new BuickCar();
         }

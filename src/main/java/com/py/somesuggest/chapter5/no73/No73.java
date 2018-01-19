@@ -10,7 +10,9 @@ import java.util.List;
 
 /**
  * 使用Comparator进行排序
- * Created by Administrator on 2017/10/25 0025.
+ *
+ * @author Administrator
+ * @date 2017/10/25 0025
  * 注意：Comparable接口可以作为实现类的默认排序方法，Comparator接口则是一个类的扩展排序工具。
  */
 /*
@@ -47,17 +49,23 @@ public class No73 {
 }
 
 class Employee implements Comparable<Employee> {
-    //id是根据进入公司的先后顺序编码的
+    /**
+     * id是根据进入公司的先后顺序编码的
+     */
     private int id;
-    //姓名
+    /**
+     * 姓名
+     */
     private String name;
-    //职位
+    /**
+     * 职位
+     */
     private Position position;
 
-    public Employee(int _id, String _name, Position _position) {
-        id = _id;
-        name = _name;
-        position = _position;
+    public Employee(int id, String name, Position position) {
+        this.id = id;
+        this.name = name;
+        this.position = position;
     }
 
     public int getId() {
@@ -92,8 +100,10 @@ class Employee implements Comparable<Employee> {
     @Override
     public int compareTo(Employee o) {
         return new CompareToBuilder()
-                .append(position, o.position)    //职位排序
-                .append(id, o.id).toComparison();    //工号排序
+                //职位排序
+                .append(position, o.position)
+                //工号排序
+                .append(id, o.id).toComparison();
     }
 
     @Override

@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter12.no150;
 
 /**
  * 抛弃7条不良的编码习惯
- * Created by Administrator on 2017/11/28 0028.
+ *
+ * @author Administrator
+ * @date 2017/11/28 0028
  */
 /*
 1.自由格式的编码

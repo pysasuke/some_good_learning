@@ -5,7 +5,9 @@ import java.util.concurrent.CyclicBarrier;
 
 /**
  * CyclicBarrier让多线程齐步走
- * Created by Administrator on 2017/11/21 0021.
+ *
+ * @author Administrator
+ * @date 2017/11/21 0021
  */
 /*
 CyclicBarrier可以用在系统的性能测试中，例如我们编写一个核心算法，但不能确定其可靠性和效率如何，
@@ -13,11 +15,13 @@ CyclicBarrier可以用在系统的性能测试中，例如我们编写一个核�
  */
 public class No131 {
     static class Worker implements Runnable {
-        //关卡
+        /**
+         * 关卡
+         */
         private CyclicBarrier cb;
 
-        public Worker(CyclicBarrier _cb) {
-            cb = _cb;
+        public Worker(CyclicBarrier cb) {
+            this.cb = cb;
         }
 
         @Override

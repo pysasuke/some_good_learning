@@ -2,11 +2,14 @@ package com.py.somesuggest.chapter10.no133;
 
 /**
  * 若非必要，不要克隆对象
- * Created by Administrator on 2017/11/22 0022.
+ *
+ * @author Administrator
+ * @date 2017/11/22 0022
  * 注意：克隆对象并不比直接生成对象效率高
  */
 public class No133 {
     private static class Apple implements Cloneable {
+        @Override
         public Object clone() {
             try {
                 return super.clone();

@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter12.no147;
 
 /**
  * 让接口的职责保持单一
- * Created by Administrator on 2017/11/28 0028.
+ *
+ * @author Administrator
+ * @date 2017/11/28 0028
  * 接口职责一定要单一，实现类的职责尽量单一
  */
 /*

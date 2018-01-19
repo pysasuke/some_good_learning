@@ -5,7 +5,9 @@ import java.util.List;
 
 /**
  * asList方法产生的List对象不可更改
- * Created by Administrator on 2017/10/23 0023.
+ *
+ * @author Administrator
+ * @date 2017/10/23 0023
  */
 //谨慎之戒之，除非非常自信该List只用于读操作
 public class No66 {
@@ -18,7 +20,8 @@ public class No66 {
          */
         List<Week> list = Arrays.asList(workDays);
         //增加周六也为工作日
-        list.add(Week.Sat);    //NOT DO THIS    Exception in thread "main" java.lang.UnsupportedOperationException
+        //NOT DO THIS    Exception in thread "main" java.lang.UnsupportedOperationException
+        list.add(Week.Sat);
     }
 }
 enum Week{

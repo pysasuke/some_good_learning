@@ -7,18 +7,20 @@ import java.lang.reflect.Proxy;
 
 /**
  * 使用反射增加装饰模式的普适性
- * Created by Administrator on 2017/11/7 0007.
+ *
+ * @author Administrator
+ * @date 2017/11/7 0007
  */
 public class No107 {
     public static void main(String[] args) {
         //定义Jerry这只家喻户晓的老鼠
-        Animal Jerry = new Rat();
+        Animal jerry = new Rat();
         //为Jerry增加飞行能力
-        Jerry = new DecorateAnimal(Jerry, FlyFeature.class);
+        jerry = new DecorateAnimal(jerry, FlyFeature.class);
         //为Jerry增加挖掘能力
-        Jerry = new DecorateAnimal(Jerry, DigFeature.class);
+        jerry = new DecorateAnimal(jerry, DigFeature.class);
         //Jerry开始耍猫了
-        Jerry.doStuff();
+        jerry.doStuff();
         /*
         增加钻地能力
         增加一直翅膀
@@ -31,7 +33,9 @@ interface Animal {
     public void doStuff();
 }
 
-//老鼠是一种动物
+/**
+ * 老鼠是一种动物
+ */
 class Rat implements Animal {
 
     @Override
@@ -40,13 +44,17 @@ class Rat implements Animal {
     }
 }
 
-//定义某种能力
+/**
+ * 定义某种能力
+ */
 interface Feature {
     //加载特性
     public void load();
 }
 
-//飞行能力
+/**
+ * 飞行能力
+ */
 class FlyFeature implements Feature {
 
     @Override
@@ -55,7 +63,9 @@ class FlyFeature implements Feature {
     }
 }
 
-//钻地能力
+/**
+ * 钻地能力
+ */
 class DigFeature implements Feature {
 
     @Override
@@ -64,16 +74,22 @@ class DigFeature implements Feature {
     }
 }
 
-//一个装饰类型必然是抽象构建的子类型，它必须要实现doStuff。
+/**
+ * 一个装饰类型必然是抽象构建的子类型，它必须要实现doStuff。
+ */
 class DecorateAnimal implements Animal {
-    //被包装的动物
+    /**
+     * 被包装的动物
+     */
     private Animal animal;
-    //使用哪一个包装器
+    /**
+     * 使用哪一个包装器
+     */
     private Class<? extends Feature> clz;
 
-    public DecorateAnimal(Animal _animal, Class<? extends Feature> _clz) {
-        animal = _animal;
-        clz = _clz;
+    public DecorateAnimal(Animal animal, Class<? extends Feature> clz) {
+        this.animal = animal;
+        this.clz = clz;
     }
 
     @Override

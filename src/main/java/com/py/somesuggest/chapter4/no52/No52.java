@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter4.no52;
 
 /**
  * 推荐使用String直接量赋值
- * Created by Administrator on 2017/10/21 0021.
+ *
+ * @author Administrator
+ * @date 2017/10/21 0021
  */
 /*
 字符串池：
@@ -30,8 +32,11 @@ public class No52 {
         //经过intern处理后的对象与直接量是否相等
         //intern会检查当前的对象在对象池(自己理解：字符串池)中是否有字面值相同的引用对象，如果有则返回池中对象，如果没有则放置到对象池中，并返回当前对象
         boolean b3 = (str1 == str4);
-        System.out.println(b1);    //true
-        System.out.println(b2);    //false
-        System.out.println(b3);    //true
+        //true
+        System.out.println(b1);
+        //false
+        System.out.println(b2);
+        //true
+        System.out.println(b3);
     }
 }

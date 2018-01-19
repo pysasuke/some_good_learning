@@ -4,6 +4,7 @@ import java.util.regex.Pattern;
 
 /**
  * 提前编译正则表达式
+ *
  * @author pysasuke
  * @create 2017-09-06 13:39
  */
@@ -12,20 +13,22 @@ public class EarlierCompileReg {
     // 动态的正则表达式在实践中比较少见。
     // 在接下来要举的例子中，每次调用String.replaceAll() 都包含了一个常量模式应用到输入值中去。
     // 因此我们预先编译这个模式可以节省CPU和内存的开销。
-    private String _replacement="";
-    private String _regex ="";
+    private String replacement = "";
+    private String regex = "";
+
     public static void main(String[] args) {
-        String _regex ="";
+        String regex = "";
     }
+
     private String transform1(String term) {
-        String outputTerm = term.replaceAll(_regex, _replacement);
+        String outputTerm = term.replaceAll(regex, replacement);
         return outputTerm;
     }
 
     //预先编译
     private String transform2(String term) {
-        Pattern _pattern = Pattern.compile(_regex);
-        String outputTerm = _pattern.matcher(term).replaceAll(_replacement);
+        Pattern pattern = Pattern.compile(regex);
+        String outputTerm = pattern.matcher(term).replaceAll(replacement);
         return outputTerm;
     }
 }

@@ -9,9 +9,11 @@ import java.util.List;
  */
 public class TestAsList {
     public static void main(String[] args) {
-        int[] datas = new int[]{1, 2, 3, 4, 5};
-        List list = Arrays.asList(datas);
-        System.out.println(list.size());    //1
-        System.out.println(list.get(0));    //[I@4554617c 整个数组作为一个对象放入list中了
+        int[] data = new int[]{1, 2, 3, 4, 5};
+        List list = Arrays.asList(data);
+        //1
+        System.out.println(list.size());
+        //[I@4554617c 整个数组作为一个对象放入list中了
+        System.out.println(list.get(0));
     }
 }

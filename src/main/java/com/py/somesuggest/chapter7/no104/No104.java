@@ -2,7 +2,9 @@ package com.py.somesuggest.chapter7.no104;
 
 /**
  * 使用forName动态加载类文件
- * Created by Administrator on 2017/11/5 0005.
+ *
+ * @author Administrator
+ * @date 2017/11/5 0005
  * 注意：foeName只是加载类，并不执行任何代码。
  */
 /*
@@ -12,7 +14,8 @@ package com.py.somesuggest.chapter7.no104;
 public class No104 {
     public static void main(String[] args) throws ClassNotFoundException {
         //动态加载
-        Class.forName("com.py.somesuggest.chapter7.no104.Utils");    //Do Something
+        //Do Something
+        Class.forName("com.py.somesuggest.chapter7.no104.Utils");
     }
 }
 class Utils{

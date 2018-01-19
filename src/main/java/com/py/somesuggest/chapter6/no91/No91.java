@@ -7,7 +7,9 @@ import java.lang.annotation.Target;
 
 /**
  * 枚举和注解结合使用威力更大
- * Created by Administrator on 2017/11/3 0003.
+ *
+ * @author Administrator
+ * @date 2017/11/3 0003
  */
 public class No91 {
     public static void main(String[] args) {
@@ -21,17 +23,30 @@ public class No91 {
         }
     }
 }
-//鉴权人接口
+
+/**
+ * 鉴权人接口
+ */
 interface Identifier {
-    //无访问权限时的礼貌语
+    /**
+     * 无访问权限时的礼貌语
+     */
     String REFUSE_WORD = "您无权访问";
 
-    //鉴权
-    public boolean identify();
+    /**
+     * 鉴权
+     * @return
+     */
+    boolean identify();
 }
-//枚举实现
+
+/**
+ * 枚举实现
+ */
 enum CommonIdentifier implements Identifier {
-    //权限级别
+    /**
+     * 权限级别
+     */
     Reader, Author, Admin;
 
     //实现权限

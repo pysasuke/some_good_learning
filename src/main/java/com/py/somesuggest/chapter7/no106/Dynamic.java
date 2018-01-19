@@ -4,7 +4,9 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * Created by Administrator on 2017/11/7 0007.
+ *
+ * @author Administrator
+ * @date 2017/11/7 0007
  */
 /*
 这里没有了代理主题角色，取而代之的是SubjectHander作为主要的逻辑委托处理，
@@ -25,13 +27,19 @@ public class Dynamic {
     }
 }
 
-//抽象主题角色
+/**
+ * 抽象主题角色
+ */
 interface Subject2 {
-    //定义一个方法
+    /**
+     * 定义一个方法
+     */
     public void request();
 }
 
-//具体主题角色
+/**
+ * 具体主题角色
+ */
 class RealSubject2 implements Subject2 {
     //实现方法
     @Override
@@ -41,11 +49,13 @@ class RealSubject2 implements Subject2 {
 }
 
 class SubjectHandler implements InvocationHandler {
-    //被代理的对象
+    /**
+     * 被代理的对象
+     */
     private Subject2 subject2;
 
-    public SubjectHandler(Subject2 _subject2) {
-        subject2 = _subject2;
+    public SubjectHandler(Subject2 subject2) {
+        this.subject2 = subject2;
     }
 
     //委托处理方法
